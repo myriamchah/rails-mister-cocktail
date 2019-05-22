@@ -3,6 +3,7 @@
   <h1><%= @cocktail.name %></h1>
 
     <div class="card p-3 mb-3 mt-3">
+      <%= cl_image_tag @cocktail.photo, crop: :fill_pad%>
       <% @cocktail.doses.each do |dose| %>
         <%= dose.description %>
         <%= dose.ingredient.name %>
